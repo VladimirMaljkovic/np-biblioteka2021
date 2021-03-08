@@ -27,7 +27,7 @@ public class Biblioteka implements IBiblioteka {
 	public LinkedList<Knjiga> vratiSveKnjige() {
 		return knjige;
 	}
-
+	//ovaj komentar zelim da obrisem
 	//sve samo ne nepotreban komentar neeeeeeeee
 	@Override
 	public LinkedList<Knjiga> pronadjiKnjigu(Autor autor, String isbn, String naslov, String izdavac) {
