@@ -23,7 +23,6 @@ public class Biblioteka implements IBiblioteka {
 		knjige.remove(knjiga);
 	}
 
-	//linux je definitivno beskoristan operativni sistem
 	@Override
 	public LinkedList<Knjiga> vratiSveKnjige() {
 		return knjige;
