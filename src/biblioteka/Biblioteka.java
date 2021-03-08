@@ -18,6 +18,8 @@ public class Biblioteka implements IBiblioteka {
 
 	@Override
 	public void obrisiKnjigu(Knjiga knjiga) {
+		if(knjiga==null || !knjige.contains(knjiga))
+			throw new RuntimeException("knjiga ne sme biti null, mora postojati");
 		knjige.remove(knjiga);
 	}
 
@@ -28,8 +30,9 @@ public class Biblioteka implements IBiblioteka {
 
 	@Override
 	public LinkedList<Knjiga> pronadjiKnjigu(Autor autor, String isbn, String naslov, String izdavac) {
+		
 		if(autor==null && isbn==null && naslov==null && izdavac==null)
-			return knjige;
+			throw new RuntimeException("mora imati bar jedan kriterijum");
 		LinkedList<Knjiga> rezultat = new LinkedList<Knjiga>();
 		
 		for(Knjiga knjiga: knjige)
