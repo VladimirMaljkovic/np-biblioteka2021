@@ -5,10 +5,30 @@ import java.util.LinkedList;
 import biblioteka.Autor;
 import biblioteka.Knjiga;
 
+/**
+ * Interfejs koji predstavlja biblioteku
+ * 
+ * @author Vladimir
+ *
+ */
 public interface IBiblioteka {
 	
+	/**
+	 * Dodaje novu knjigu u biblioteku.
+	 * 
+	 * @param knjiga - Knjiga koja se dodaje
+	 * 
+	 * @throws java.lang.NullPointerException ako je uneta knjiga null
+	 * 
+	 * @throws java.lang.RuntimeException ako uneta knjiga vec postoji u biblioteci (duplikat)
+	 */
 	public void dodajKnjigu(Knjiga knjiga);
 	
+	/**
+	 * Brise knjigu iz bibliteke.
+	 * 
+	 * @param knjiga - Knjiga koja treba da se obrise
+	 */
 	public void obrisiKnjigu(Knjiga knjiga);
 	
 	public LinkedList<Knjiga> vratiSveKnjige();
