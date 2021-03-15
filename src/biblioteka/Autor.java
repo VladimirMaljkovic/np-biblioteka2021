@@ -10,6 +10,11 @@ public class Autor {
 	}
 	
 	public void setIme(String ime) {
+		if(ime == null)
+			throw new NullPointerException("Ime ne sme biti null");
+		if(ime.length() < 2)
+			throw new RuntimeException("Ime mora imati vise od 2 znaka");
+		
 		this.ime = ime;
 	}
 	
@@ -18,7 +23,22 @@ public class Autor {
 	}
 	
 	public void setPrezime(String prezime) {
+		if(prezime == null)
+			throw new NullPointerException("prezime ne sme biti null");
+		if(prezime.length() < 2)
+			throw new RuntimeException("prezime mora imati vise od 2 znaka");
 		this.prezime = prezime;
+	}
+	
+
+	public Autor() {
+		super();
+	}
+
+	public Autor(String ime, String prezime) {
+		super();
+		setIme(ime);
+		setPrezime(prezime);
 	}
 
 	@Override
