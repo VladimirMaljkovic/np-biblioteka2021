@@ -3,10 +3,20 @@ package biblioteka;
 import java.util.LinkedList;
 
 import biblioteka.interfaces.IBiblioteka;
-
+/**
+ * Klasa koja implementira interfejs IBiblioteka. Predstavlja implementaciju preko liste.
+ * 
+ * @author Vladimir
+ *
+ */
 public class Biblioteka implements IBiblioteka {
 	
+	/**
+	 * Dvostruko spregnuta lista sa svim knjigama u biblioteci.
+	 */
 	private LinkedList<Knjiga> knjige = new LinkedList<Knjiga>();
+	
+	
 	@Override
 	public void dodajKnjigu(Knjiga knjiga) {
 		if(knjiga==null)
